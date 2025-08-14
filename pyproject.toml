@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-chronophotography"
+version = "1.0.0"
+description = "A ComfyUI custom node for creating chronophotography effects from video frames"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "ComfyUI-chronophotography"}
+]
+keywords = ["comfyui", "chronophotography", "computer-vision", "image-processing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "torch"
+]
+
+[project.urls]
+Homepage = "https://github.com/kusurin/ComfyUI-chronophotography"
+Repository = "https://github.com/kusurin/ComfyUI-chronophotography"
+Issues = "https://github.com/kusurin/ComfyUI-chronophotography/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["tests*", "example_workflow*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt", "*.json", "*.yaml", "*.yml"]
+
+[tool.comfy]
+PublisherId = "kusurin"
+DisplayName = "ComfyUI-chronophotography"
+Icon = ""
